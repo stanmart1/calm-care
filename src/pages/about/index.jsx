@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import { useTranslation } from 'react-i18next';
 import Header from 'components/ui/Header';
 import Footer from 'components/ui/Footer';
 import Button from 'components/ui/Button';
@@ -9,6 +10,7 @@ import CredentialsBadge from './components/CredentialsBadge';
 import ApproachCard from './components/ApproachCard';
 
 const AboutPage = () => {
+  const { t } = useTranslation();
   const handleBookSession = () => {
     window.location.href = '/services-booking';
   };
@@ -81,7 +83,7 @@ const AboutPage = () => {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className="text-center lg:text-left">
                   <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-foreground mb-6 leading-tight">
-                    Meet Dr. Sarah Chen
+                    {t('About Our Practice')}
                   </h1>
                   <p className="text-xl md:text-2xl text-muted-foreground mb-8 font-body leading-relaxed">
                     Licensed Clinical Social Worker specializing in trauma therapy, anxiety treatment, and relationship counseling
@@ -94,7 +96,7 @@ const AboutPage = () => {
                       size="lg"
                       className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-soft"
                     >
-                      Schedule Consultation
+                      {t('Book Now')}
                     </Button>
                     <Button
                       variant="outline"
@@ -133,7 +135,7 @@ const AboutPage = () => {
             <div className="max-w-4xl mx-auto px-4 md:px-6 lg:px-8">
               <div className="bg-card rounded-lg border border-border p-8 md:p-12 shadow-soft">
                 <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-8 text-center">
-                  My Journey in Mental Health
+                  {t('Our Mission')}
                 </h2>
                 
                 <div className="space-y-6 text-muted-foreground font-body leading-relaxed">
@@ -177,7 +179,7 @@ const AboutPage = () => {
             <div className="max-w-4xl mx-auto px-4 md:px-6 lg:px-8">
               <div className="text-center">
                 <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-8">
-                  My Mission & Values
+                  {t('Our Approach')}
                 </h2>
                 <div className="bg-primary/10 border border-primary/20 rounded-lg p-8 md:p-12">
                   <blockquote className="text-xl md:text-2xl font-body text-foreground italic leading-relaxed mb-6">

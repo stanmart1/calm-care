@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import Image from 'components/AppImage';
 import Button from 'components/ui/Button';
 import Icon from 'components/AppIcon';
 
 const HeroSection = () => {
+  const { t } = useTranslation();
   const handleBookSession = () => {
     window.location.href = '/services-booking';
   };
@@ -28,13 +30,11 @@ const HeroSection = () => {
               </div>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-foreground leading-tight">
-                Find Peace in Your
-                <span className="text-primary block">Mental Health Journey</span>
+                {t('Find Peace and Healing')}
               </h1>
               
               <p className="text-lg md:text-xl text-muted-foreground font-body max-w-2xl mx-auto lg:mx-0">
-                Professional, compassionate counseling services in a safe and supportive environment. 
-                Take the first step towards healing and personal growth with our licensed therapists.
+                {t('Professional counseling services to help you navigate life\'s challenges with compassion and expertise.')}
               </p>
             </div>
 
@@ -48,7 +48,7 @@ const HeroSection = () => {
                 iconPosition="left"
                 className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-soft-lg"
               >
-                Book Your Session
+                {t('Book Now')}
               </Button>
               
               <Link to="/client-resources">
@@ -59,7 +59,7 @@ const HeroSection = () => {
                   iconPosition="left"
                   className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
                 >
-                  Explore Resources
+                  {t('Learn More')}
                 </Button>
               </Link>
             </div>

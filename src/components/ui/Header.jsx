@@ -1,17 +1,19 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import Button from 'components/ui/Button';
 import Icon from 'components/AppIcon';
 
 const Header = () => {
+  const { t } = useTranslation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
 
   const navigationItems = [
-    { label: 'Home', path: '/homepage', icon: 'Home' },
-    { label: 'Services', path: '/services-booking', icon: 'Calendar' },
-    { label: 'Resources', path: '/client-resources', icon: 'BookOpen' },
-    { label: 'Contact', path: '/contact-location', icon: 'MapPin' }
+    { label: t('Home'), path: '/homepage', icon: 'Home' },
+    { label: t('Services'), path: '/services-booking', icon: 'Calendar' },
+    { label: t('Resources'), path: '/client-resources', icon: 'BookOpen' },
+    { label: t('Contact'), path: '/contact-location', icon: 'MapPin' }
   ];
 
   const isActivePath = (path) => {
@@ -70,7 +72,7 @@ const Header = () => {
               iconPosition="left"
               className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-soft"
             >
-              Book Session
+              {t('Book Now')}
             </Button>
           </div>
 
@@ -84,7 +86,7 @@ const Header = () => {
               iconPosition="left"
               className="text-primary border-primary hover:bg-primary hover:text-primary-foreground"
             >
-              Book
+              {t('Book Now')}
             </Button>
             <button
               onClick={toggleMobileMenu}
@@ -126,7 +128,7 @@ const Header = () => {
                   iconPosition="left"
                   className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-soft"
                 >
-                  Book Session
+                  {t('Book Now')}
                 </Button>
               </div>
             </nav>

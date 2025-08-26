@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import Icon from 'components/AppIcon';
 import Button from 'components/ui/Button';
 import Input from 'components/ui/Input';
 
 const PaymentsSection = () => {
+  const { t } = useTranslation();
   const [filterStatus, setFilterStatus] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -111,7 +113,7 @@ const PaymentsSection = () => {
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
         <div>
           <h1 className="text-3xl font-heading font-bold text-foreground">
-            Payment Management
+            {t('Payment Summary')}
           </h1>
           <p className="text-muted-foreground font-body mt-1">
             Track session fees, invoices, and payment status across all clients.
@@ -124,7 +126,7 @@ const PaymentsSection = () => {
             iconName="Download"
             iconPosition="left"
           >
-            Export Report
+            {t('Export')}
           </Button>
           <Button
             size="sm"
@@ -132,7 +134,7 @@ const PaymentsSection = () => {
             iconPosition="left"
             className="bg-primary hover:bg-primary/90"
           >
-            Record Payment
+            {t('Add')}
           </Button>
         </div>
       </div>
@@ -147,7 +149,7 @@ const PaymentsSection = () => {
               <p className="text-2xl font-heading font-bold text-foreground">
                 ${totalRevenue?.toFixed(2)}
               </p>
-              <p className="text-sm text-muted-foreground font-body">Total Revenue</p>
+              <p className="text-sm text-muted-foreground font-body">{t('Total Amount')}</p>
             </div>
           </div>
         </div>
@@ -161,7 +163,7 @@ const PaymentsSection = () => {
               <p className="text-2xl font-heading font-bold text-foreground">
                 ${paidAmount?.toFixed(2)}
               </p>
-              <p className="text-sm text-muted-foreground font-body">Collected</p>
+              <p className="text-sm text-muted-foreground font-body">{t('Completed')}</p>
             </div>
           </div>
         </div>
@@ -175,7 +177,7 @@ const PaymentsSection = () => {
               <p className="text-2xl font-heading font-bold text-foreground">
                 ${pendingAmount?.toFixed(2)}
               </p>
-              <p className="text-sm text-muted-foreground font-body">Pending</p>
+              <p className="text-sm text-muted-foreground font-body">{t('Pending')}</p>
             </div>
           </div>
         </div>
@@ -189,7 +191,7 @@ const PaymentsSection = () => {
               <p className="text-2xl font-heading font-bold text-foreground">
                 ${overdueAmount?.toFixed(2)}
               </p>
-              <p className="text-sm text-muted-foreground font-body">Overdue</p>
+              <p className="text-sm text-muted-foreground font-body">{t('Overdue')}</p>
             </div>
           </div>
         </div>
@@ -355,7 +357,7 @@ const PaymentsSection = () => {
       <div className="bg-card rounded-lg border border-border p-6 shadow-soft">
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-xl font-heading font-semibold text-foreground">
-            Payment Reminders
+            {t('Payment Method')}
           </h2>
           <Button
             variant="outline"
@@ -363,7 +365,7 @@ const PaymentsSection = () => {
             iconName="Send"
             iconPosition="left"
           >
-            Send All Reminders
+            {t('Send')}
           </Button>
         </div>
         
@@ -401,7 +403,7 @@ const PaymentsSection = () => {
                   iconName="Mail"
                   iconPosition="left"
                 >
-                  Send Reminder
+                  {t('Send')}
                 </Button>
                 <Button
                   variant="outline"
@@ -409,7 +411,7 @@ const PaymentsSection = () => {
                   iconName="Phone"
                   iconPosition="left"
                 >
-                  Call
+                  {t('Contact Us')}
                 </Button>
               </div>
             </div>

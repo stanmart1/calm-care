@@ -1,16 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import Icon from 'components/AppIcon';
 import Button from 'components/ui/Button';
 
 const Footer = () => {
+  const { t } = useTranslation();
   const currentYear = new Date()?.getFullYear();
 
   const quickLinks = [
-    { label: 'Home', path: '/homepage' },
-    { label: 'Services', path: '/services-booking' },
-    { label: 'Resources', path: '/client-resources' },
-    { label: 'Contact', path: '/contact-location' }
+    { label: t('Home'), path: '/homepage' },
+    { label: t('Services'), path: '/services-booking' },
+    { label: t('Resources'), path: '/client-resources' },
+    { label: t('Contact'), path: '/contact-location' }
   ];
 
   const legalLinks = [
@@ -77,7 +79,7 @@ const Footer = () => {
             {/* Newsletter Signup */}
             <div className="mb-6">
               <h4 className="text-sm font-heading font-semibold text-foreground mb-3">
-                Mental Health Resources
+                {t('Newsletter Subscription')}
               </h4>
               <form onSubmit={handleNewsletterSignup} className="flex space-x-2">
                 <input
@@ -94,7 +96,7 @@ const Footer = () => {
                   iconPosition="left"
                   className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
                 >
-                  Subscribe
+                  {t('Subscribe')}
                 </Button>
               </form>
             </div>
@@ -119,7 +121,7 @@ const Footer = () => {
           {/* Quick Links */}
           <div>
             <h4 className="text-sm font-heading font-semibold text-foreground mb-4">
-              Quick Links
+              {t('Quick Links')}
             </h4>
             <ul className="space-y-3">
               {quickLinks?.map((link) => (
@@ -138,7 +140,7 @@ const Footer = () => {
           {/* Contact & Legal */}
           <div>
             <h4 className="text-sm font-heading font-semibold text-foreground mb-4">
-              Contact & Legal
+              {t('Contact Information')}
             </h4>
             <div className="space-y-3 mb-6">
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
@@ -174,7 +176,7 @@ const Footer = () => {
         <div className="mt-12 pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-xs text-muted-foreground font-body">
-              © {currentYear} CalmCare Counseling. All rights reserved. Licensed mental health services.
+              {t('© 2024 CalmCare Counseling. All rights reserved.')}
             </p>
             <div className="flex items-center space-x-6">
               <div className="flex items-center space-x-2 text-xs text-muted-foreground">

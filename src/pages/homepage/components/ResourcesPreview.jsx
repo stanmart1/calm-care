@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import Image from 'components/AppImage';
 import Button from 'components/ui/Button';
 import Icon from 'components/AppIcon';
 
 const ResourcesPreview = () => {
+  const { t } = useTranslation();
   const resources = [
     {
       id: 1,
@@ -97,7 +99,7 @@ const ResourcesPreview = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
             <Icon name="BookOpen" size={16} className="mr-2" />
-            Mental Health Resources
+            {t('Mental Health Resources')}
           </div>
           
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-foreground mb-6">
@@ -115,7 +117,7 @@ const ResourcesPreview = () => {
           <div className="lg:col-span-2 space-y-8">
             <div className="flex items-center justify-between">
               <h3 className="text-xl font-heading font-semibold text-foreground">
-                Latest Resources
+                {t('Resources')}
               </h3>
               <Link to="/client-resources">
                 <Button
@@ -125,7 +127,7 @@ const ResourcesPreview = () => {
                   iconPosition="right"
                   className="text-primary hover:bg-primary/10"
                 >
-                  View All
+                  {t('View All')}
                 </Button>
               </Link>
             </div>
@@ -184,7 +186,7 @@ const ResourcesPreview = () => {
                             iconPosition="right"
                             className="text-primary hover:bg-primary/10 p-0"
                           >
-                            Read More
+                            {t('Read More')}
                           </Button>
                         </Link>
                       </div>
@@ -199,7 +201,7 @@ const ResourcesPreview = () => {
           <div className="space-y-8">
             <div>
               <h3 className="text-xl font-heading font-semibold text-foreground mb-6">
-                Quick Wellness Tips
+                {t('Wellness Tips')}
               </h3>
               
               <div className="space-y-4">
@@ -235,10 +237,10 @@ const ResourcesPreview = () => {
                 
                 <div>
                   <h4 className="text-lg font-heading font-semibold text-foreground mb-2">
-                    Weekly Wellness Tips
+                    {t('Newsletter Subscription')}
                   </h4>
                   <p className="text-sm text-muted-foreground font-body">
-                    Get mental health tips and resources delivered to your inbox.
+                    {t('Stay updated with our latest resources and tips')}
                   </p>
                 </div>
 
@@ -256,7 +258,7 @@ const ResourcesPreview = () => {
                     iconPosition="left"
                     className="bg-primary hover:bg-primary/90 text-primary-foreground"
                   >
-                    Subscribe
+                    {t('Subscribe')}
                   </Button>
                 </div>
               </div>
@@ -271,7 +273,7 @@ const ResourcesPreview = () => {
                 
                 <div>
                   <h4 className="text-lg font-heading font-semibold text-foreground mb-2">
-                    Crisis Support
+                    {t('Crisis Resources')}
                   </h4>
                   <p className="text-sm text-muted-foreground font-body mb-4">
                     If you're in crisis, help is available 24/7.
@@ -286,7 +288,7 @@ const ResourcesPreview = () => {
                     iconPosition="left"
                     className="border-error text-error hover:bg-error hover:text-error-foreground"
                   >
-                    Call 988 Crisis Lifeline
+                    {t('Call 988 - Crisis Lifeline')}
                   </Button>
                 </div>
               </div>
