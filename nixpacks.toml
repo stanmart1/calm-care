@@ -1,27 +1,16 @@
-# nixpacks.toml
-[phases]
-# Install dependencies
-install = [
-  "npm ci"
-]
+[phases.install]
+commands = ["npm ci"]
 
-# Build production bundle
-build = [
-  "npm run build"
-]
+[phases.build]
+commands = ["npm run build"]
 
-# Start the app
-start = [
-  "npx serve -s build -l ${PORT}"
-]
+[phases.start]
+commands = ["npx serve -s build -l ${PORT}"]
 
 [env]
 NODE_ENV = "production"
 PORT = "3000"
 
 [services.web]
-# The port Coolify will expose
 port = "${PORT}"
-
-# SPA fallback configuration
 spa = true
