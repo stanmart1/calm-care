@@ -91,16 +91,16 @@ const HeroSection = () => {
               />
               
               {/* Overlay Card */}
-              <div className="absolute bottom-6 left-6 right-6 bg-card/95 backdrop-blur-sm border border-border rounded-lg p-6 shadow-soft">
+              <div className="absolute bottom-6 left-6 right-6 bg-white/98 backdrop-blur-sm border border-border rounded-lg p-6 shadow-soft">
                 <div className="flex items-center space-x-4">
                   <div className="flex items-center justify-center w-12 h-12 bg-primary/10 rounded-full">
                     <Icon name="Users" size={20} className="text-primary" />
                   </div>
                   <div>
-                    <div className="text-sm font-heading font-semibold text-foreground">
+                    <div className="text-sm font-heading font-semibold text-white">
                       500+ Clients Helped
                     </div>
-                    <div className="text-xs text-muted-foreground font-body">
+                    <div className="text-xs text-white font-body">
                       Building stronger mental health since 2018
                     </div>
                   </div>

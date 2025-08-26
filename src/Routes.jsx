@@ -19,7 +19,7 @@ const Routes = () => {
       <ScrollToTop />
       <RouterRoutes>
         {/* Define your route here */}
-        <Route path="/" element={<ClientResources />} />
+        <Route path="/" element={<Homepage />} />
         <Route path="/client-resources" element={<ClientResources />} />
         <Route path="/contact-location" element={<ContactLocationPage />} />
         <Route path="/services-booking" element={<ServicesBooking />} />

@@ -5,8 +5,7 @@ import Footer from 'components/ui/Footer';
 import SearchBar from './components/SearchBar';
 import FilterChips from './components/FilterChips';
 
-import CrisisResources from './components/CrisisResources';
-import FeaturedContent from './components/FeaturedContent';
+
 import NewsletterSubscription from './components/NewsletterSubscription';
 import ResourceGrid from './components/ResourceGrid';
 
@@ -178,7 +177,7 @@ const ClientResources = () => {
             <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
               <div className="text-center mb-8">
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-foreground mb-4">
-                  Mental Health Resources
+                  Counseling Resources
                 </h1>
                 <p className="text-lg text-muted-foreground font-body max-w-3xl mx-auto">
                   Access valuable educational materials, worksheets, and tools to support 
@@ -195,8 +194,7 @@ const ClientResources = () => {
           </section>
 
           <div className="max-w-7xl mx-auto px-4 py-12 md:px-6 lg:px-8">
-            {/* Crisis Resources - Always Visible */}
-            <CrisisResources />
+
 
             {/* Filter Chips */}
             <div className="mb-8">
@@ -207,10 +205,7 @@ const ClientResources = () => {
               />
             </div>
 
-            {/* Featured Content */}
-            {activeCategory === 'all' && !searchTerm && (
-              <FeaturedContent featuredResources={featuredResources} />
-            )}
+
 
             {/* Resources Grid */}
             <div className="mb-12">
