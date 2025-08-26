@@ -107,6 +107,17 @@ const SidebarNavigation = ({ activeSection, onSectionChange, collapsed, onToggle
               variant="ghost"
               size="sm"
               fullWidth
+              onClick={() => window.location.href = '/homepage'}
+              iconName="Home"
+              iconPosition="left"
+              className="justify-start text-muted-foreground hover:text-foreground"
+            >
+              Back to Home
+            </Button>
+            <Button
+              variant="ghost"
+              size="sm"
+              fullWidth
               iconName="HelpCircle"
               iconPosition="left"
               className="justify-start text-muted-foreground hover:text-foreground"
@@ -127,6 +138,13 @@ const SidebarNavigation = ({ activeSection, onSectionChange, collapsed, onToggle
           </div>
         ) : (
           <div className="space-y-2">
+            <button
+              onClick={() => window.location.href = '/homepage'}
+              className="w-full p-2 rounded-md text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+              aria-label="Back to Home"
+            >
+              <Icon name="Home" size={20} />
+            </button>
             <button
               className="w-full p-2 rounded-md text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
               aria-label="Support"
