@@ -18,50 +18,66 @@ module.exports = {
     },
     extend: {
       colors: {
-        border: "var(--color-border)", /* gray-200 with opacity */
-        input: "var(--color-input)", /* white */
-        ring: "var(--color-ring)", /* steel-blue-500 */
-        background: "var(--color-background)", /* gray-50 */
-        foreground: "var(--color-foreground)", /* gray-800 */
+        border: "var(--color-border)",
+        input: "var(--color-input)",
+        ring: "var(--color-ring)",
+        background: "var(--color-background)",
+        foreground: "var(--color-foreground)",
         primary: {
-          DEFAULT: "var(--color-primary)", /* steel-blue-500 */
-          foreground: "var(--color-primary-foreground)", /* white */
+          DEFAULT: "var(--color-primary)",
+          foreground: "var(--color-primary-foreground)",
         },
         secondary: {
-          DEFAULT: "var(--color-secondary)", /* sage-green-500 */
-          foreground: "var(--color-secondary-foreground)", /* white */
+          DEFAULT: "var(--color-secondary)",
+          foreground: "var(--color-secondary-foreground)",
         },
         destructive: {
-          DEFAULT: "var(--color-destructive)", /* red-300 */
-          foreground: "var(--color-destructive-foreground)", /* gray-900 */
+          DEFAULT: "var(--color-destructive)",
+          foreground: "var(--color-destructive-foreground)",
         },
         muted: {
-          DEFAULT: "var(--color-muted)", /* gray-100 */
-          foreground: "var(--color-muted-foreground)", /* gray-500 */
+          DEFAULT: "var(--color-muted)",
+          foreground: "var(--color-muted-foreground)",
         },
         accent: {
-          DEFAULT: "var(--color-accent)", /* warm-gold-400 */
-          foreground: "var(--color-accent-foreground)", /* gray-800 */
+          DEFAULT: "var(--color-accent)",
+          foreground: "var(--color-accent-foreground)",
         },
         popover: {
-          DEFAULT: "var(--color-popover)", /* white */
-          foreground: "var(--color-popover-foreground)", /* gray-800 */
+          DEFAULT: "var(--color-popover)",
+          foreground: "var(--color-popover-foreground)",
         },
         card: {
-          DEFAULT: "var(--color-card)", /* white */
-          foreground: "var(--color-card-foreground)", /* gray-800 */
+          DEFAULT: "var(--color-card)",
+          foreground: "var(--color-card-foreground)",
         },
         success: {
-          DEFAULT: "var(--color-success)", /* green-400 */
-          foreground: "var(--color-success-foreground)", /* gray-900 */
+          DEFAULT: "var(--color-success)",
+          foreground: "var(--color-success-foreground)",
         },
         warning: {
-          DEFAULT: "var(--color-warning)", /* orange-300 */
-          foreground: "var(--color-warning-foreground)", /* gray-900 */
+          DEFAULT: "var(--color-warning)",
+          foreground: "var(--color-warning-foreground)",
         },
         error: {
-          DEFAULT: "var(--color-error)", /* red-300 */
-          foreground: "var(--color-error-foreground)", /* gray-900 */
+          DEFAULT: "var(--color-error)",
+          foreground: "var(--color-error-foreground)",
+        },
+        info: {
+          DEFAULT: "var(--color-info)",
+          foreground: "var(--color-info-foreground)",
+        },
+        neutral: {
+          50: "var(--color-neutral-50)",
+          100: "var(--color-neutral-100)",
+          200: "var(--color-neutral-200)",
+          300: "var(--color-neutral-300)",
+          400: "var(--color-neutral-400)",
+          500: "var(--color-neutral-500)",
+          600: "var(--color-neutral-600)",
+          700: "var(--color-neutral-700)",
+          800: "var(--color-neutral-800)",
+          900: "var(--color-neutral-900)",
         },
       },
       borderRadius: {
@@ -110,6 +126,20 @@ module.exports = {
         '200': '200ms',
         '300': '300ms',
         '400': '400ms',
+      },
+      spacing: {
+        '1': 'var(--space-1)',
+        '2': 'var(--space-2)',
+        '3': 'var(--space-3)',
+        '4': 'var(--space-4)',
+        '5': 'var(--space-5)',
+        '6': 'var(--space-6)',
+        '8': 'var(--space-8)',
+        '10': 'var(--space-10)',
+        '12': 'var(--space-12)',
+        '16': 'var(--space-16)',
+        '20': 'var(--space-20)',
+        '24': 'var(--space-24)',
       },
     },
   },

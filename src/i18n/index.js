@@ -151,8 +151,8 @@ const resources = {
       "Confidentiality": "Confidentiality",
       "Compassionate Care": "Compassionate Care",
       "Excellence": "Excellence",
-      "Crisis Support Available 24/7": "Crisis Support Available 24/7",
-      "Call 988 - Crisis Lifeline": "Call 988 - Crisis Lifeline",
+
+
       "Mental Health Resources": "Mental Health Resources",
       "Enter your email": "Enter your email",
       "HIPAA Compliant": "HIPAA Compliant",

@@ -21,9 +21,7 @@ const Footer = () => {
     { label: 'HIPAA Notice', path: '/hipaa' }
   ];
 
-  const handleEmergencyContact = () => {
-    window.open('tel:988', '_self');
-  };
+
 
   const handleNewsletterSignup = (e) => {
     e?.preventDefault();
@@ -34,30 +32,7 @@ const Footer = () => {
   return (
     <footer className="bg-card border-t border-border">
       <div className="max-w-7xl mx-auto px-4 py-12 md:px-6 lg:px-8">
-        {/* Emergency Notice */}
-        <div className="mb-8 p-4 bg-error/10 border border-error/20 rounded-lg">
-          <div className="flex items-start space-x-3">
-            <Icon name="AlertTriangle" size={20} className="text-error mt-0.5 flex-shrink-0" />
-            <div className="flex-1">
-              <h3 className="text-sm font-heading font-semibold text-error mb-1">
-                Crisis Support Available 24/7
-              </h3>
-              <p className="text-sm text-muted-foreground mb-3 font-body">
-                If you're experiencing a mental health emergency, please contact the crisis hotline immediately.
-              </p>
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={handleEmergencyContact}
-                iconName="Phone"
-                iconPosition="left"
-                className="border-error text-error hover:bg-error hover:text-error-foreground"
-              >
-                Call 988 - Crisis Lifeline
-              </Button>
-            </div>
-          </div>
-        </div>
+
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand Section */}

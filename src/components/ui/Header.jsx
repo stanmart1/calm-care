@@ -63,8 +63,18 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Desktop Book Session Button */}
-          <div className="hidden md:block">
+          {/* Desktop Action Buttons */}
+          <div className="hidden md:flex items-center space-x-3">
+            <Link to="/admin-dashboard">
+              <Button
+                variant="default"
+                iconName="Settings"
+                iconPosition="left"
+                className="bg-green-500 hover:bg-black text-white shadow-soft"
+              >
+                {t('Admin')}
+              </Button>
+            </Link>
             <Button
               variant="default"
               onClick={handleBookSession}
@@ -76,8 +86,16 @@ const Header = () => {
             </Button>
           </div>
 
-          {/* Mobile Menu Button and Book Session */}
-          <div className="flex items-center space-x-3 md:hidden">
+          {/* Mobile Action Buttons and Menu */}
+          <div className="flex items-center space-x-2 md:hidden">
+            <Link to="/admin-dashboard">
+              <Button
+                variant="default"
+                size="sm"
+                iconName="Settings"
+                className="bg-green-500 hover:bg-black text-white"
+              />
+            </Link>
             <Button
               variant="outline"
               size="sm"

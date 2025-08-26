@@ -264,35 +264,7 @@ const ResourcesPreview = () => {
               </div>
             </div>
 
-            {/* Emergency Support */}
-            <div className="bg-error/5 border border-error/20 rounded-xl p-6">
-              <div className="text-center space-y-4">
-                <div className="flex items-center justify-center w-12 h-12 bg-error/10 rounded-full mx-auto">
-                  <Icon name="Phone" size={20} className="text-error" />
-                </div>
-                
-                <div>
-                  <h4 className="text-lg font-heading font-semibold text-foreground mb-2">
-                    {t('Crisis Resources')}
-                  </h4>
-                  <p className="text-sm text-muted-foreground font-body mb-4">
-                    If you're in crisis, help is available 24/7.
-                  </p>
-                  
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    fullWidth
-                    onClick={() => window.open('tel:988', '_self')}
-                    iconName="Phone"
-                    iconPosition="left"
-                    className="border-error text-error hover:bg-error hover:text-error-foreground"
-                  >
-                    {t('Call 988 - Crisis Lifeline')}
-                  </Button>
-                </div>
-              </div>
-            </div>
+
           </div>
         </div>
       </div>

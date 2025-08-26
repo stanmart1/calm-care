@@ -30,32 +30,7 @@ const SocialLinks = () => {
     }
   ];
 
-  const professionalAffiliations = [
-    {
-      name: 'American Psychological Association',
-      abbreviation: 'APA',
-      icon: 'Award',
-      description: 'Licensed member in good standing'
-    },
-    {
-      name: 'National Association of Social Workers',
-      abbreviation: 'NASW',
-      icon: 'Users',
-      description: 'Certified clinical social worker'
-    },
-    {
-      name: 'American Association for Marriage and Family Therapy',
-      abbreviation: 'AAMFT',
-      icon: 'Heart',
-      description: 'Specialized in couples and family therapy'
-    },
-    {
-      name: 'International Association of Trauma Counselors',
-      abbreviation: 'IATC',
-      icon: 'Shield',
-      description: 'Trauma-informed care specialist'
-    }
-  ];
+
 
   const handleSocialClick = (url) => {
     window.open(url, '_blank', 'noopener,noreferrer');
@@ -100,36 +75,7 @@ const SocialLinks = () => {
           ))}
         </div>
       </div>
-      {/* Professional Affiliations */}
-      <div className="bg-card rounded-lg border border-border shadow-soft p-6">
-        <h2 className="text-2xl font-heading font-semibold text-foreground mb-4">
-          Professional Affiliations
-        </h2>
-        <p className="text-muted-foreground font-body mb-6">
-          Our therapists maintain active memberships with leading professional organizations
-        </p>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {professionalAffiliations?.map((affiliation) => (
-            <div
-              key={affiliation?.abbreviation}
-              className="flex items-center space-x-4 p-4 border border-border rounded-lg"
-            >
-              <div className="flex items-center justify-center w-10 h-10 bg-success/10 rounded-lg">
-                <Icon name={affiliation?.icon} size={20} className="text-success" />
-              </div>
-              <div className="flex-1">
-                <h3 className="font-heading font-medium text-foreground">
-                  {affiliation?.abbreviation}
-                </h3>
-                <p className="text-sm text-muted-foreground font-body">
-                  {affiliation?.description}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+
       {/* Newsletter Signup */}
       <div className="bg-gradient-to-r from-primary/5 to-secondary/5 rounded-lg border border-border shadow-soft p-6">
         <div className="text-center">
