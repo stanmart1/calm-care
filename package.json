@@ -62,7 +62,7 @@
     "start": "vite",
     "build": "vite build --sourcemap",
     "serve": "vite preview",
-    "start:prod": "serve -s build -l 3000"
+    "start:prod": "serve -s build -p 3000"
   },
   "eslintConfig": {
     "extends": [

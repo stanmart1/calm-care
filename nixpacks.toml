@@ -1,16 +1,8 @@
 [phases.install]
-commands = ["npm ci"]
+cmds = ["npm ci"]
 
 [phases.build]
-commands = ["npm run build"]
+cmds = ["npm run build"]
 
-[phases.start]
-commands = ["npx serve -s build -l ${PORT}"]
-
-[env]
-NODE_ENV = "production"
-PORT = "3000"
-
-[services.web]
-port = "${PORT}"
-spa = true
+[start]
+cmd = "npx serve -s build -p 3000"
